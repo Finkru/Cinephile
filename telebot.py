@@ -19,7 +19,7 @@ def handle_text_doc(message):
     if message.text == '🚨':
         bot.send_message(message.chat.id, 'Теперь, пришли описание загаданного фильма')
 
-
+#сохраняет сообщение пользователя в файл
 def record_message(message):
     f = open('test.txt', 'w+')
     try:
