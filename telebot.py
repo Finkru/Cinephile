@@ -20,5 +20,13 @@ def handle_text_doc(message):
         bot.send_message(message.chat.id, 'Теперь, пришли описание загаданного фильма')
 
 
+def record_message(message):
+    f = open('test.txt', 'w+')
+    try:
+        message_to_save = message.text
+        f.write(message_to_save)
+    finally:
+        f.close()
+
 
 bot.infinity_polling(none_stop=True)
